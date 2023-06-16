@@ -14,14 +14,14 @@ class Database {
     }
 
     init() {
-        this.connection = new Sequelize(configDataBase)
+        this.connection = new Sequelize("postgresql://postgres:TVZDRiDYJmXfL0SNzZIV@containers-us-west-191.railway.app:6632/railway")
         models.map((model) => model.init(this.connection))
             .map(model => model.associate && model.associate(this.connection.models))
     }
 
     mongo() {
         this.mongoConnection = mongoose.connect(
-            'mongodb://localhost:27017/codeburguer',
+            'mongodb://mongo:LecEkzZjzdo4VlBEx8yW@containers-us-west-103.railway.app:5743',
             {
                 useNewUrlParser: true,
                 useUnifiedTopology: true,

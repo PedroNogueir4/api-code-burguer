@@ -1,6 +1,7 @@
 {
   "name": "code-burguer",
   "version": "1.0.0",
+  "type": "commonjs",
   "description": "",
   "main": "src/server.js",
   "scripts": {
